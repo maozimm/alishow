@@ -15,18 +15,18 @@ $('#add').on('click', function(e) {
     e.preventDefault();
     console.log($('form').serialize());
 
-    // $.ajax({
-    //     url: '/users',
-    //     type: 'post',
-    //     data: $('form').serialize(),
-    //     success: function(data) {
-    //         //刷新页面
-    //         location.reload();
-    //     },
-    //     error: function() {
-    //         alert('输入的格式有错误');
-    //     }
-    // })
+    $.ajax({
+        url: '/users',
+        type: 'post',
+        data: $('form').serialize(),
+        success: function(data) {
+            //刷新页面
+            location.reload();
+        },
+        error: function() {
+            alert('输入的格式有错误');
+        }
+    })
 });
 $('#avatar').on('change', function() {
     let formdata = new FormData();
