@@ -6,5 +6,5 @@ $.ajax({
             location.href = 'login.html'
         }
     },
-    anync: false
+    async: false
 })
